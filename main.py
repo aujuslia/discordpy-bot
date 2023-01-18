@@ -19,16 +19,10 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def fuckdavid(ctx):
-    david = bot.get_user(87667737815445504)
-    channel = bot.get_channel(1052533505051070495)
-    await channel.send(f"fuck you {david.mention}")
-    
-@bot.event
-async def on_message(msg):
-    david = bot.get_user(87667737815445504)
-    if msg.author == david:
-        await msg.channel.send("fuck you david")
+async def makefile(ctx):
+    await file = open("testwrfile.txt", "w")
+    await file.write("This is a silly test!")
+    await file.close()
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
