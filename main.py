@@ -18,11 +18,11 @@ bot = commands.Bot(command_prefix='~', intents=intents)
 async def ping(ctx):
     await ctx.send('pong')
     
-@bot.command()
-async def makefile(ctx):
-    await file = open("testwrfile.txt", "w")
-    await file.write("This is a silly test!")
-    await file.close()
+# @bot.command()
+# async def makefile(ctx):
+#    await file = open("testwrfile.txt", "w")
+#    await file.write("This is a silly test!")
+#    await file.close()
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
