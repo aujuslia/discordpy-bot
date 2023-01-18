@@ -26,8 +26,8 @@ async def fuckdavid(ctx):
     
 @bot.event
 async def on_message(msg):
+    david = bot.get_user(87667737815445504)
     if msg.author == david:
-        david = bot.get_user(87667737815445504)
         await msg.channel.send("fuck you david")
 
 
