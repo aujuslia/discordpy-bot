@@ -21,7 +21,8 @@ async def ping(ctx):
 @bot.command()
 async def fuckdavid(ctx):
     channel = bot.get_channel(1052533505051070495)
-    await channel.send("fuck you @Davidvz13")
+    david = bot.get_user(322127489721827328)
+    await channel.send(f"fuck you {david.mention}")
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
